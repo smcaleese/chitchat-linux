@@ -1,12 +1,12 @@
 # ChitChat Linlux
 
 ## How to Install
-1. Download the project.
+Download the project.
 
-2. Run these commands:
+Run these commands:
 
-```rails db:schema:load```
+  ```rails db:schema:load```
 
-```rails s```
+  ```rails s```
 
-3. Open [localhost:3000](localhost:3000) in the browser.
+Open [localhost:3000](localhost:3000) in the browser.
