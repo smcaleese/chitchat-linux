@@ -1,4 +1,4 @@
-# ChitChat Linlux
+# ChitChat Linux
 
 ## How to Install
 1. Download the project.
