@@ -1,0 +1,30 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.wrapper {
+    text-align: center;
+}
+
+.home-text {
+    padding: 10px;
+}
+
+.signup-button {
+    position: relative;
+    left: -10px;
+    padding: 10px;
+    font-size: 25px;
+}
+
+.p-main {
+    font-size: 15px;
+    position: relative;
+    left: -10px;
+}
+
+.signup-button-link, .signup-button-link:hover {
+    color: black;
+    text-decoration: none;
+}
+

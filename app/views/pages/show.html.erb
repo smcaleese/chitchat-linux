@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+    <title><%= @page.title %></title>
+</head>
+
+<body>
+    <%= render 'layouts/general' %>
+    
+    <h2><div class="page-title-div"><%= @page.title %></div></h2>
+    
+    <div class="pages-show-wrapper">
+      <% @page.comments.each_with_index do |comment, i| %>
+        <% if comment && i == 0 %>
+            <h3 class="comment-text">Comments</h3>
+            <br />
+        <% end %>
+    
+        <div class="comment">
+          <div class="comment-body">
+            <p><%= comment.body %></p>
+          </div>
+          <br />
+          <div class="comment-author">
+            <p>Created by: <%= comment.user.email %></p>
+          </div>
+        </div>
+      <% end %>
+      
+      <br />
+      <div class="add-a-comment">
+        <h3 class="comment-text">Add a new comment</h3>
+        <%= render 'comments/form' %>
+      </div>
+    </div>
+</body>

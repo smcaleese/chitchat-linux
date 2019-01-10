@@ -1,0 +1,13 @@
+<div class="new-page-form">
+    
+<%= form_for(@page) do |f| %>
+    <p>
+        <b>Title of page</b><br />
+        <%= f.text_field :title %>
+    </p>
+    <p>
+        <%= f.submit 'submit', class: 'btn' %>
+    </p>
+<% end %>
+
+</div>

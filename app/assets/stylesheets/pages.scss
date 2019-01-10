@@ -1,0 +1,81 @@
+// Place all the styles related to the pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+h2 {
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+}
+
+.pages-index-wrapper {
+    text-align: center;
+}
+
+.row {
+    text-align: center;
+}
+
+.td {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 10px 200px 10px 200px;
+}
+
+.td:nth-child(odd) {
+    background-color: #eee;
+}
+
+.page-title-link {
+    color: black;
+    font-size: 16px;
+}
+
+.new-page-form {
+    margin-top: 50px;
+    text-align: center;
+}
+
+// show.html.erb
+
+.pages-show-wrapper {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.comments-header {
+    color: black;
+}
+
+.comment {
+    border: 1px solid #ddd;
+    background-color: #f0f0f0;
+    width: 500px;
+    margin: auto;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.comment-body {
+    padding-bottom: 10px;
+    font-size: 18px;
+}
+
+.comment-author {
+    font-size: 12px;
+}
+
+.comment-author p {
+    color: #404040;
+}
+
+.add-a-comment {
+    background-color: #f0f0f0;
+    width: 400px;
+    margin: auto;
+}
+
+textarea {
+    height: 80px;
+    width: 200px;
+}
