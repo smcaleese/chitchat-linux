@@ -8,7 +8,7 @@ ChitChat is a free Ruby on Rails app template. Feel free to use it.
 - Comment on these pages.
 
 ## Requirements
-- Ruby on Rails
+- Ruby on Rails:
 [install rails for linux](https://medium.com/@rgdev/how-to-install-ruby-rails-on-ubuntu-16-04-from-scratch-quickly-4da73c67daa3)
 
 ## Installation
