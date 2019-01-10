@@ -1,4 +1,5 @@
 # ChitChat for Linux
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ChitChat is a free Ruby on Rails app template. Feel free to use it.
 
