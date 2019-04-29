@@ -19,5 +19,3 @@ ChitChat is a social networking app implemented in Ruby on Rails. Its main featu
 2. Run `rails db:schema:load` and then `rails s`
 
 3. Open [localhost:3000](localhost:3000) in the browser.
-
-[Click here to get the Windows 10 version](https://github.com/smcaleese/ChitChat-Windows10)
