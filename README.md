@@ -16,6 +16,8 @@ ChitChat is a social networking app implemented in Ruby on Rails. Its main featu
 ## Installation
 1. Download the project.
 
-2. Run `rails db:schema:load` and then `rails s`
+2. Make sure you are using Ruby version 2.6.0: `rvm use 2.6.0`
 
-3. Open [localhost:3000](localhost:3000) in the browser.
+3. Run `rails db:schema:load` and then `rails s`
+
+4. Open [localhost:3000](localhost:3000) in the browser.
