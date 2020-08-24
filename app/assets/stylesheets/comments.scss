@@ -1,6 +1,6 @@
 #pages-container,
 #comments-container {
-    background-color: #f0f0f0;
+    background-color: var(--light-gray);
     padding-top: 2rem;
     padding-bottom: 10rem;
     display: flex;
@@ -51,7 +51,7 @@
 
     #comment-textarea:focus {
         outline: none;
-        box-shadow: 0 0 1px 2px #20aaf0a0;
+        box-shadow: 0 0 1px 2px var(--light-blue);
     }
 
     #comment-submit-button {
@@ -62,7 +62,7 @@
         height: 2.5rem;
         border-radius: 0.2rem;
         font-size: 1rem;
-        background-color: #ffa500;
+        background-color: var(--orange);
         outline: none;
     }
 

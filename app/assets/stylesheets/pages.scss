@@ -11,8 +11,13 @@
     }
 }
 
+#pages-background {
+    height: 90vh;
+    background-color: var(--light-gray);
+}
+
 #pages-container {
-    background-color: #f0f0f0;
+    background-color: var(--light-gray);
     padding-top: 2rem;
     padding-bottom: 5rem;
     display: flex;
@@ -46,7 +51,7 @@
 
 // pages/new and pages/edit
 #new-page-background {
-    background-color: #f0f0f0;
+    background-color: var(--light-gray);
     height: 90vh;
 }
 
@@ -73,7 +78,7 @@
         }
         input:focus {
             outline: none;
-            box-shadow: 0 0 1px 2px #20aaf0a0;
+            box-shadow: 0 0 1px 2px var(--light-blue);
         }
         textarea {
             width: 20rem;
@@ -84,7 +89,7 @@
         }
         textarea:focus {
             outline: none;
-            box-shadow: 0 0 1px 2px #20aaf0a0;
+            box-shadow: 0 0 1px 2px var(--light-blue);
         }
     }
     #new-page-button {
@@ -96,7 +101,7 @@
         height: 2.5rem;
         border-radius: 0.2rem;
         font-size: 1rem;
-        background-color: #20aaf0a0;
+        background-color: var(--light-blue);
         outline: none;
     }
     #new-page-button:hover {
@@ -108,7 +113,7 @@
         height: 2.5rem;
         border-radius: 0.2rem;
         font-size: 1rem;
-        background-color: #20aaf080;
+        background-color: var(--light-blue);
         outline: none;
         cursor: pointer;
     }

@@ -30,3 +30,9 @@ a {
     text-decoration: none;
     color: black;
 }
+
+:root {
+    --light-gray: #f0f0f0;
+    --light-blue: #20aaf0a0;
+    --orange: #ffa500;
+}

@@ -11,8 +11,13 @@
     }
 }
 
+#background {
+    background-color: var(--light-gray);
+    height: 90vh;
+}
+
 #my-pages-container {
-    background-color: #f0f0f0;
+    background-color: var(--light-gray);
     padding-top: 2rem;
     padding-bottom: 5rem;
     display: flex;
@@ -48,7 +53,7 @@
                 height: 2.5rem;
                 border-radius: 0.2rem;
                 font-size: 1rem;
-                background-color: #ffa500;
+                background-color: var(--orange);
                 outline: none;
                 white-space: nowrap;
 

@@ -4,13 +4,15 @@
     <h1>Pages</h1>
 </div>
 
-<div id="pages-container">
-    <% @users.each do |user| %>
-        <% user.pages.each do |page| %>
-            <div class="page-box">
-                <%= link_to page.title, page_path(page), class: "page-title" %>
-                <%= link_to page.description, page_path(page), class: "page-description" %>
-            </div>
+<div id="pages-background">
+    <div id="pages-container">
+        <% @users.each do |user| %>
+            <% user.pages.each do |page| %>
+                <div class="page-box">
+                    <%= link_to page.title, page_path(page), class: "page-title" %>
+                    <%= link_to page.description, page_path(page), class: "page-description" %>
+                </div>
+            <% end %>
         <% end %>
-    <% end %>
+    </div>
 </div>

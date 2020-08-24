@@ -3,7 +3,7 @@
 #reset-password-background {
     height: 100vh;
     width: 100%;
-    background-color: #ffa500;
+    background-color: var(--orange);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -108,7 +108,7 @@ input#password-confirmation {
 #login-form div input:focus,
 #reset-password-form div input:focus {
     outline: none;
-    box-shadow: 0 0 1px 2px #20aaf0a0;
+    box-shadow: 0 0 1px 2px var(--light-blue);
 }
 
 #signup-button,
@@ -123,7 +123,7 @@ input#password-confirmation {
     height: 3rem;
     border-radius: 0.2rem;
     font-size: 1rem;
-    background-color: #20aaf0a0;
+    background-color: var(--light-blue);
     outline: none;
     cursor: pointer;
 }
@@ -135,7 +135,7 @@ input#password-confirmation {
 #signup-button:hover,
 #login-button:hover,
 password-reset-button:hover {
-    background-color: #20aaf080;
+    background-color: var(--light-blue);
     cursor: pointer;
 }
 
