@@ -43,11 +43,11 @@ class PagesController < ApplicationController
        @page = @user.pages.find(params[:id])
 
        @page.destroy
-       redirect_to pages_path
+       redirect_to users_path
     end
 
     private
     def page_params
-       params.require(:page).permit(:title)
+       params.require(:page).permit(:title, :description)
     end
 end

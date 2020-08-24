@@ -1,17 +1,16 @@
-<%= render 'layouts/general' %>
+<%= render 'layouts/nav' %>
 
-<div class="pages-index-wrapper">
-<h2>Pages</h2>
+<div id="title-bar">
+    <h1>Pages</h1>
+</div>
 
-  <% @users.each do |user| %>
-    <% user.pages.each do |page| %>
-      <div class="row">
-        <tr>
-          <div class="td"><td><%= link_to page.title, page_path(page), class: 'page-title-link' %></td></div>
-        </tr>
-        <br />
-    </div>
+<div id="pages-container">
+    <% @users.each do |user| %>
+        <% user.pages.each do |page| %>
+            <div class="page-box">
+                <%= link_to page.title, page_path(page), class: "page-title" %>
+                <%= link_to page.description, page_path(page), class: "page-description" %>
+            </div>
+        <% end %>
     <% end %>
-  <% end %>
-
 </div>

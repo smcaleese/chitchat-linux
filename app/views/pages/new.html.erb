@@ -1,3 +1,29 @@
-<%= render 'layouts/general' %>
-  <h2>Create a new page</h2>
-<%= render 'form' %>
+<!DOCTYPE html>
+<html lan="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <%= render "layouts/nav" %>
+    <div id="title-bar">
+        <h1>Create New Page</h1>
+    </div>
+    <div id="new-page-background">
+        <%= form_for(@page, html: {id: "new-page-form"}) do |f| %>
+            <div class="new-page-input">
+                <label>Title</label><br />
+                <%= f.text_field :title %>
+            </div>
+            <div class="new-page-input">
+                <label>Description</label><br />
+                <%= f.text_field :description %>
+            </div>
+            <div>
+                <%= f.submit "submit", id: "new-page-button" %>
+            </div>
+        <% end %>
+    </div>
+</body>
+</html>

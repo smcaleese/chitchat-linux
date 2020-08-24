@@ -1,81 +1,115 @@
-// Place all the styles related to the pages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
-h2 {
-    margin: auto;
+// pages/index
+#title-bar {
+    width: 100%;
     text-align: center;
-    padding: 10px;
+    background-color: white;
+
+    h1 {
+        padding-top: 5.5rem;
+        padding-bottom: 1.5rem;
+        font-size: 1.5rem;
+    }
 }
 
-.pages-index-wrapper {
-    text-align: center;
-}
-
-.row {
-    text-align: center;
-}
-
-.td {
-    display: inline-block;
-    margin-bottom: 10px;
-    padding: 10px 200px 10px 200px;
-}
-
-.td:nth-child(odd) {
-    background-color: #eee;
-}
-
-.page-title-link {
-    color: black;
-    font-size: 16px;
-}
-
-.new-page-form {
-    margin-top: 50px;
-    text-align: center;
-}
-
-// show.html.erb
-
-.pages-show-wrapper {
-    margin-top: 40px;
-    text-align: center;
-}
-
-.comments-header {
-    color: black;
-}
-
-.comment {
-    border: 1px solid #ddd;
+#pages-container {
     background-color: #f0f0f0;
-    width: 500px;
-    margin: auto;
-    padding: 20px;
-    margin-bottom: 20px;
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .page-box {
+        width: 35rem;
+        border-radius: 0.5rem;
+        background-color: white;
+        margin: 1rem;
+        padding: 1rem;
+
+        a {
+            display: inline-block;
+            padding: 0.4rem;
+        }
+        .page-title {
+            font-size: 1.5rem;
+        }
+        .page-description {
+            font-size: 1rem;
+        }
+    }
+    @media only screen and (max-width: 800px) {
+        .page-box {
+            width: 80vw;
+        }
+    }
 }
 
-.comment-body {
-    padding-bottom: 10px;
-    font-size: 18px;
-}
-
-.comment-author {
-    font-size: 12px;
-}
-
-.comment-author p {
-    color: #404040;
-}
-
-.add-a-comment {
+// pages/new and pages/edit
+#new-page-background {
     background-color: #f0f0f0;
-    width: 400px;
-    margin: auto;
+    height: 90vh;
 }
 
-textarea {
-    height: 80px;
-    width: 200px;
+#new-page-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    margin: 0;
+
+    .new-page-input {
+        margin: 1rem;
+
+        label {
+            font-size: 1.1rem;
+        }
+        input {
+            width: 20rem;
+            height: 2rem;
+            border-radius: 0.2rem;
+            border: 1px solid #aaa;
+            margin-top: 0.5rem;
+        }
+        input:focus {
+            outline: none;
+            box-shadow: 0 0 1px 2px #20aaf0a0;
+        }
+        textarea {
+            width: 20rem;
+            height: 5rem;
+            border-radius: 0.2rem;
+            border: 1px solid #aaa;
+            margin-top: 0.5rem;
+        }
+        textarea:focus {
+            outline: none;
+            box-shadow: 0 0 1px 2px #20aaf0a0;
+        }
+    }
+    #new-page-button {
+        margin: 1rem;
+        color: white;
+        font-weight: bold;
+        border: none;
+        width: 15rem;
+        height: 2.5rem;
+        border-radius: 0.2rem;
+        font-size: 1rem;
+        background-color: #20aaf0a0;
+        outline: none;
+    }
+    #new-page-button:hover {
+        margin: 1rem;
+        color: white;
+        font-weight: bold;
+        border: none;
+        width: 15rem;
+        height: 2.5rem;
+        border-radius: 0.2rem;
+        font-size: 1rem;
+        background-color: #20aaf080;
+        outline: none;
+        cursor: pointer;
+    }
 }

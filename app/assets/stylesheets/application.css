@@ -13,3 +13,20 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+    font-family: Lato, serif;
+    box-sizing: border-box;
+}
+
+body,
+section,
+h1 {
+    margin: 0;
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}

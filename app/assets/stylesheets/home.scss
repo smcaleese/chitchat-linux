@@ -1,30 +1,44 @@
-// Place all the styles related to the home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
-.wrapper {
+#main-banner {
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    //background-color: #ffa500;
     text-align: center;
-}
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-.home-text {
-    padding: 10px;
-}
+    background:
+        linear-gradient(217deg, rgba(255, 30, 0, 0.8), rgba(255, 102, 0, 0.2) 70.71%),
+        linear-gradient(127deg, #ffa500, rgba(255, 196, 0, 0.2) 70.71%),
+        linear-gradient(336deg, rgba(255, 205, 39, 0.8), rgba(76, 255, 31, 0.2) 70.71%);
 
-.signup-button {
-    position: relative;
-    left: -10px;
-    padding: 10px;
-    font-size: 25px;
-}
+    #main-h1 {
+        font-size: 4rem;
+        font-weight: bold;
+    }
 
-.p-main {
-    font-size: 15px;
-    position: relative;
-    left: -10px;
-}
+    #main-p {
+        font-size: 2rem;
+    }
 
-.signup-button-link, .signup-button-link:hover {
-    color: black;
-    text-decoration: none;
-}
+    #main-button {
+        border: none;
+        height: 3rem;
+        width: 10rem;
+        border-radius: 10rem;
+        font-size: 1rem;
+        font-weight: bold;
+        background-color: white;
+        outline: none;
+    }
 
+    #main-button:hover {
+        background-color: #f0f0f0;
+    }
+
+    #main-button-link {
+        padding: 1rem 2rem;
+    }
+}

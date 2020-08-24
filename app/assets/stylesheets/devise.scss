@@ -1,46 +1,157 @@
-h2, h3 {
-    font-family: Arial;
-    padding: 10px;
+#signup-background,
+#login-background,
+#reset-password-background {
+    height: 100vh;
+    width: 100%;
+    background-color: #ffa500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.personal-details {
-    position: absolute;
-    left: 30%;
-    width: 600px;
-    border-radius: 10%;
-    text-align: center;
-    background-color: #eee;
+#signup-box,
+#login-box,
+#reset-password-box {
+    height: 60vh;
+    width: 30vw;
+    background-color: white;
+    border-radius: 1rem;
 }
 
-.devise-header {
-    position: relative;
-    width: 200px;   
-    margin: auto;
+#reset-password-box {
+    height: 30vh;
 }
 
-.login-div, .signup-div {
-    width: 300px;
-    margin: auto;
-    text-align: center;
-    padding: 20px;
-    border-radius: 10%;
-    background-color: #ccc;
+@media only screen and (max-width: 1000px) {
+    #signup-box,
+    #login-box {
+        height: 60vh;
+        width: 40vw;
+    }
+    #reset-password-box {
+        width: 40vw;
+    }
 }
 
-.login-button {
-    background-color: #fafafa;
+@media only screen and (max-width: 800px) {
+    #signup-box,
+    #login-box {
+        height: 70vh;
+        width: 50vw;
+    }
+    #reset-password-box {
+        width: 50vw;
+    }
 }
 
-.field {
-    padding: 10px;
+@media only screen and (max-width: 600px) {
+    #signup-box,
+    #login-box {
+        height: 70vh;
+        width: 85vw;
+    }
+    #reset-password-box {
+        height: 50vh;
+        width: 85vw;
+    }
+    #signup-form div input,
+    #login-form #email,
+    #login-form #password  {
+        margin: 0;
+        width: 60vw;
+        height: 4vh;
+    }
 }
 
-.devise-links {
-    position: relative;
-    top: 15px;
+#signup-form,
+#login-form,
+#reset-password-form {
+    margin: 0;
+    height: inherit;
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        font-size: 1.5rem;
+        margin: 0.8rem;
+        font-weight: 400;
+    }
+    div {
+        margin: 0.5rem;
+        display: flex;
+        flex-direction: column;
+    }
+    label {
+        font-size: 1.1rem;
+    }
 }
 
-.signup-with-google {
-    position: absolute;
-    left: 510px;
+#error_explanation ul li,
+#login-form ul li {
+    max-width: 14rem;
+}
+
+input#email,
+input#password,
+input#password-confirmation {
+    margin-top: 0.5rem;
+    width: 16rem;
+    height: 2rem;
+    border: 1px solid #aaa;
+    border-radius: 0.2rem;
+}
+
+#signup-form div input:focus,
+#login-form div input:focus,
+#reset-password-form div input:focus {
+    outline: none;
+    box-shadow: 0 0 1px 2px #20aaf0a0;
+}
+
+#signup-button,
+#login-button,
+#delete-account-button,
+#password-reset-button {
+    margin-bottom: 1rem;
+    color: white;
+    font-weight: bold;
+    border: none;
+    width: 15rem;
+    height: 3rem;
+    border-radius: 0.2rem;
+    font-size: 1rem;
+    background-color: #20aaf0a0;
+    outline: none;
+    cursor: pointer;
+}
+
+#signup-button {
+    margin: 1rem;
+}
+
+#signup-button:hover,
+#login-button:hover,
+password-reset-button:hover {
+    background-color: #20aaf080;
+    cursor: pointer;
+}
+
+#error_explanation {
+    margin: 0;
+}
+
+#devise-links {
+    padding: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+#delete-account-button {
+    background-color: red;
 }

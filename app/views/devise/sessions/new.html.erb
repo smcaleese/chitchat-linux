@@ -1,30 +1,43 @@
-<%= render 'layouts/general' %>
+<html lan="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
 
-<h2>Login</h2>
+    <body>
+        <%= render "layouts/nav" %>
+        <div id="login-background">
+            <div id="login-box">
+                <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { id: "login-form" }) do |f| %>
+                    <h1>Login</h1>
+                    <div id="field">
+                        <%= f.label :email %>
+                        <%= f.email_field :email, id: "email" %>
+                    </div>
 
-<div class="login-div">
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
+                    <div id="field">
+                        <%= f.label :password %>
+                        <%= f.password_field :password, id: "password" %>
+                    </div>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
+                    <% if devise_mapping.rememberable? %>
+                        <div id="checkbox-div">
+                            <%= f.label :remember_me, id: "checkbox-text" do %>
+                                remember me
+                                <%= f.check_box :remember_me, id: "checkbox" %>
+                            <% end %>
+                        </div>
+                    <% end %>
 
-  <% if devise_mapping.rememberable? -%>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
-    </div>
-  <% end -%>
+                    <div id="field">
+                        <%= f.submit "Login", id: "login-button" %>
+                    </div>
 
-  <div class="actions">
-    <%= f.submit "Login", class: 'btn login-button' %>
-  </div>
-<% end %>
-
-<div class="devise-links"><%= render "devise/shared/links" %></div>
-</div>
+                    <div id="devise-links">
+                        <%= render "devise/shared/links" %>
+                    </div>
+                <% end %>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Welcome</title>
-  </head>
-  <body>
-    <%= render 'layouts/general' %>
-    
-    <div class="wrapper">
-        <h2 class="home-text">Welcome to ChitChat</h2>
-        <h3 class="home-text">Create topic pages, comment on pages and explore other people's pages</h3>
-        <button class="signup-button btn"><%= link_to 'Signup', new_user_registration_path, class: 'signup-button-link' %></button>
-        <p class="p-main">or</p>
-        <button class="signup-button btn"><%= link_to 'Explore pages', pages_path, class: 'signup-button-link' %></button>
-    </div>
-    
-  </body>
+<head>
+    <title>ChitChat</title>
+</head>
+<body>
+    <%= render "layouts/nav" %>
+    <section id="main-banner">
+        <h1 id="main-h1">ChitChat</h1>
+        <p id="main-p">Create topic pages, comment on pages and explore other people's pages</p>
+        <div id="main-button-div">
+            <button id="main-button">
+                <%= link_to "Sign up", new_user_registration_path, id: "main-button-link" %>
+            </button>
+        </div>
+    </section>
+</body>
 </html>

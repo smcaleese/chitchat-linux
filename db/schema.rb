@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_08_182013) do
+ActiveRecord::Schema.define(version: 2020_08_14_113201) do
 
   create_table "add_user_id_to_comments", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -18,11 +18,11 @@ ActiveRecord::Schema.define(version: 2019_01_08_182013) do
   end
 
   create_table "comments", force: :cascade do |t|
-    t.text     "body"
-    t.integer  "page_id"
+    t.text "body"
+    t.integer "page_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer  "user_id"
+    t.integer "user_id"
   end
 
   create_table "models", force: :cascade do |t|
@@ -37,34 +37,28 @@ ActiveRecord::Schema.define(version: 2019_01_08_182013) do
     t.index ["reset_password_token"], name: "index_models_on_reset_password_token", unique: true
   end
 
-  # add_index "models", ["email"], name: "index_models_on_email", unique: true
-  # add_index "models", ["reset_password_token"], name: "index_models_on_reset_password_token", unique: true
-
   create_table "pages", force: :cascade do |t|
-    t.text     "title"
+    t.text "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer  "user_id"
+    t.integer "user_id"
+    t.text "description"
   end
 
   create_table "users", force: :cascade do |t|
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
-    t.string   "reset_password_token"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
+    t.integer "sign_in_count", default: 0, null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip"
-    t.string   "last_sign_in_ip"
-    t.string   "username"
+    t.string "current_sign_in_ip"
+    t.string "last_sign_in_ip"
+    t.string "username"
   end
-
-  # add_index "users", ["email"], name: "index_users_on_email", unique: true
-  # add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
-  # add_index "users", ["username"], name: "index_users_on_username", unique: true
 
 end
