@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<body>
+    <div id="comments-title-bar">
+        <h1><%= @page.title %></h1>
+        <p><%= @page.description %></p>
+        <p class="username">posted by: <%= @page.user.email %></p>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </div>
+    <div id="comments-page-background">
+        <div id="comments-container">
+            <% @page.comments.each_with_index do |comment, i| %>
+                <div class="comment-box">
+                    <p class="comment-description"><%= comment.body %></p>
+                    <p class="username">posted by: <%= comment.user.email %></p>
+                </div>
+            <% end %>
+            
+            <div id="new-comment-div">
+                <%= form_for [@page, @page.comments.build], html: { id: "new-comment-form" } do |f| %>
+                    <%= f.text_area :body, placeholder: "add new comment", id: "comment-textarea" %>
+                    <%= f.submit "post", id: "comment-submit-button" %>
+                <% end %>
+            </div>
+        </div>
+    </div>
+</body>

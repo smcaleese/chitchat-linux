@@ -1,0 +1,47 @@
+<html lan="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+    <body>
+        <nav id="navbar-top">
+            <%= link_to "ChitChat", root_path, id: "navbar-title" %>
+            <% if user_signed_in? %>
+                <div id="dropdown">
+                    <button id="menu-button" onclick="dropdown()">Menu &#9660;</button>
+                    <ul id="menu-ul">
+                        <li><%= link_to "pages", pages_path %></li>
+                        <li><%= link_to "my pages", users_path %></li>
+                        <li><%= link_to "create new page", new_page_path%></li>
+                        <li><%= link_to "my account", edit_user_registration_path %></li>
+                        <li><%= link_to "logout", destroy_user_session_path, method: :delete %></li>
+                    </ul>
+                </div>
+            <% else %>
+                <div id="nav-login-and-signup">
+                    <div id="nav-signup">
+                        <%= link_to "Sign up", new_user_registration_path, id: "nav-signup-link" %>
+                    </div>
+                    <div id="nav-login">
+                        <%= link_to "Login", new_user_session_path, id: "nav-login-link" %>
+                    </div>
+                </div>
+            <% end %>
+        </nav>
+
+        <script>
+            var activated = false;
+            function dropdown() {
+                var dropdown = document.getElementById("menu-ul");
+                if(activated == false) {
+                    dropdown.style.display = "block";
+                    activated = true;
+                } else {
+                    dropdown.style.display = "none";
+                    activated = false;
+                }
+            }
+        </script>
+    </body>
+</html>
